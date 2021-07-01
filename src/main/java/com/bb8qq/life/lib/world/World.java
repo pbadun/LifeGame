@@ -73,12 +73,11 @@ public class World {
         ) {
             sum = a[x - 1][y - 1] + a[x][y - 1] + a[x + 1][y - 1]
                     + a[x - 1][y] + a[x + 1][y]
-                    + a[x + 1][y - 1] + a[x + 1][y] + a[x + 1][y + 1];
+                    + a[x - 1][y + 1] + a[x][y + 1] + a[x + 1][y + 1];
 
         } else {
             sum = new Random().nextInt(5);
         }
-
 
 
         if (sum == 3) {

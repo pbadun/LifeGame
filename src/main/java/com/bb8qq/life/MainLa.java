@@ -15,7 +15,7 @@ public class MainLa extends JFrame {
         getContentPane().add(graphJPanel);
 
         pack();
-        setSize(512, 512);
+        setSize(1024, 1024);
 
     }
 }
