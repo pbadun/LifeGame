@@ -13,8 +13,8 @@ public class MyGraphJPanel extends JPanel implements ActionListener {
     private Timer timer = new Timer(1, this);
     private World world;
 
-    private final int width = 512;
-    private final int height = 512;
+    private final int width = 128;
+    private final int height = 128;
 
     public MyGraphJPanel(JFrame jFrame) {
         this.frame = jFrame;
@@ -25,10 +25,14 @@ public class MyGraphJPanel extends JPanel implements ActionListener {
 
     public void paint(Graphics g) {
         g.drawImage(ee(), 0, 0, frame.getWidth() - 10, frame.getHeight() - 40, null);
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+        }
     }
 
     private BufferedImage ee() {
-        BufferedImage output = new BufferedImage(width, height , BufferedImage.TYPE_INT_ARGB);
+        BufferedImage output = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         world.nextStep(output);
         return output;
     }

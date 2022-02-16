@@ -8,7 +8,7 @@ import java.awt.*;
 public class MainLa extends JFrame {
 
     public MainLa() throws HeadlessException {
-        super("TITLE");
+        super("Life");
         setResizable(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         MyGraphJPanel graphJPanel = new MyGraphJPanel(this);
